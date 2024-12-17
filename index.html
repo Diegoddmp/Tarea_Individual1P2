@@ -17,68 +17,44 @@
 			<div style="padding-left:510px;">
 				<img src="Imagenes/selloespe.jpg" alt="ESPE" height="100" >
 			</div>
-			<h1>MENU</h1>
-    <hr>
-    <p>1. Fibonacy</p>
-    <p>2. Cubo</p>
-    <p>3. Fraccionarios</p>
-    <p>S. Salir</p>
-    <hr>
-    <form method="post">
-        <label for="option">Escoja una opción:</label>
-        <select id="option" name="option" required onchange="updateInputs()">
-            <option value="">Seleccione...</option>
-            <option value="1" <?= isset($option) && $option == '1' ? 'selected' : '' ?>>1 - Fibonacy</option>
-            <option value="2" <?= isset($option) && $option == '2' ? 'selected' : '' ?>>2 - Cubo</option>
-            <option value="3" <?= isset($option) && $option == '3' ? 'selected' : '' ?>>3 - Fraccionarios</option>
-            <option value="S" <?= isset($option) && $option == 'S' ? 'selected' : '' ?>>S - Salir</option>
-        </select>
-        <br><br>
-        <div id="inputs">
-            <?php if (isset($option) && $option == '1'): ?>
-                <label for="fibonacci_n">Ingrese un número entero (1 ≤ N ≤ 50):</label>
-                <input type="number" id="fibonacci_n" name="fibonacci_n" min="1" max="50" value="<?= isset($n) ? $n : '' ?>" required>
-            <?php elseif (isset($option) && $option == '3'): ?>
-                <label>Ingrese 4 fraccionarios:</label><br>
-                A: <input type="number" name="num_a" required> / <input type="number" name="den_a" required><br>
-                B: <input type="number" name="num_b" required> / <input type="number" name="den_b" required><br>
-                C: <input type="number" name="num_c" required> / <input type="number" name="den_c" required><br>
-                D: <input type="number" name="num_d" required> / <input type="number" name="den_d" required><br>
-            <?php endif; ?>
-        </div>
-        <br>
-        <button type="submit">Enviar</button>
-    </form>
-    <hr>
-    <?php if (isset($result)): ?>
-        <h2>Resultado:</h2>
-        <p><?= $result ?></p>
-    <?php elseif (isset($error)): ?>
-        <h2>Error:</h2>
-        <p style="color: red;"><?= $error ?></p>
-    <?php endif; ?>
-
-    <script>
-        function updateInputs() {
-            const option = document.getElementById('option').value;
-            const inputs = document.getElementById('inputs');
-            inputs.innerHTML = ''; // Limpiar campos previos
-
-            if (option === "1") {
-                inputs.innerHTML = `
-                    <label for="fibonacci_n">Ingrese un número entero (1 ≤ N ≤ 50):</label>
-                    <input type="number" id="fibonacci_n" name="fibonacci_n" min="1" max="50" required>
-                `;
-            } else if (option === "3") {
-                inputs.innerHTML = `
-                    <label>Ingrese 4 fraccionarios:</label><br>
-                    A: <input type="number" name="num_a" required> / <input type="number" name="den_a" required><br>
-                    B: <input type="number" name="num_b" required> / <input type="number" name="den_b" required><br>
-                    C: <input type="number" name="num_c" required> / <input type="number" name="den_c" required><br>
-                    D: <input type="number" name="num_d" required> / <input type="number" name="den_d" required><br>
-                `;
-            }
-        }
-    </script>					 		
+			<div style="padding-left:395px;">
+				<h2>
+					<p style="text-align: center" style="color:#165014" ;>DEPARTAMENTO DE CIENCIAS DE LA COMPUTACIÓN</p>
+					<p style="text-align: center" style="color:#165014" ;>INGENIERÍA EN TECNOLOGIAS</p>
+				</h2>
+				<h3>
+					<p style="text-align: center" style="color:#165014" ;>APLICACIONES DE TECNOLOGIAS WEB - PHP BASICO</p>
+				</h3>
+			</div>
+			<div style="padding-left:90px;">
+				<h4><p style="color:#1f1450";>Integrante: Diego Mosquera</p></h4>
+				<h4><p style="color:#1f1450";>NRC: 3788</p></h4>
+				<h4><p style="color:#1f1450";>Fecha: 17/12/2024</p></h4>
+			</div>
+			<div style="padding-left:250px;">
+			  <h3>
+				<p style="text-align: center" style="color:#165014" ;>TAREA INDIVIDUAL</p>
+			  </h3>
+			</div>	
+			
+				<div style="padding-left:250px;">
+					<table border="3px" align="center">
+					
+						<tr>
+							<th>Ejercicio</th>
+							<th>Descripción</th>
+						</tr>
+						<tr>
+							<td style="text-align: center";><a href="menu1.php">1</a></td>
+							<td>1. Menu 01</td>
+						</tr>
+						<tr>
+							<td style="text-align: center";><a href="menu2.php">2</a></td>
+							<td>2. Menu 02</td>
+						</tr>
+															
+					</table>
+				</div>
+			</div>						 		
 	</body>
 </html>
